@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<link rel="manifest" href="manifest.json">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>mgame</title>
@@ -37,10 +38,16 @@ iframe {
 </head>
 
 <body>
+ 
 
 <iframe src="https://mgame.base44.app"></iframe>
 
 <div class="bottom-bar"></div>
 
 </body>
+    <script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
+}
+</script>
 </html>
